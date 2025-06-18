@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> AB Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #00ffcc;
+      overflow-x: hidden;
+    }.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  font-size: 2.5em;
+  color: #00ffcc;
+  background: linear-gradient(to right, #003300, #001a66);
+  letter-spacing: 2px;
+  box-shadow: 0 2px 10px #00ffcc;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #00ffcc;
+  border-bottom: 2px solid #00ffcc;
+  padding-bottom: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+.fadeIn {
+  animation-delay: 0.3s;
+}
+.fadeIn2 {
+  animation-delay: 0.6s;
+}
+.fadeIn3 {
+  animation-delay: 0.9s;
+}
+
+a {
+  color: #00ffcc;
+  text-decoration: underline;
+}
+
+.highlight {
+  background: linear-gradient(to right, #003300, #001a33);
+  padding: 10px;
+  border-left: 5px solid #00ffcc;
+  margin: 20px 0;
+  color: #ccffdd;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #00ffcc;
+  border-top: 1px solid #004400;
+  background: #000;
+}
+
+  </style>
+</head>
+<body>  <header class="slide-up"> AngryBoy</header>  <section class="slide-up fadeIn">
+    <h2>About Me</h2>
+    <p>I'm <strong>AngryBoy</strong> – a fresher in Computer Science who’s hungry to learn and build. I love mixing tech and creativity, and even with just a mobile, I’ve started exploring things others wait years to try.</p>
+    <div class="highlight">
+      🔥 "I don't wait for opportunities — I build them from scratch."
+    </div>
+  </section>  <section class="slide-up fadeIn2">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JS (Learning Basics)</li>
+      <li>Resume Designing via Canva (Mobile Only)</li>
+      <li>Video Editing & 3D Animation (Kinemaster & Capcut)</li>
+      <li>Arduino + Firebase Integration (Basics)</li>
+      <li>Creative Writing & Digital Branding</li>
+    </ul>
+  </section>  <section class="slide-up fadeIn3">
+    <h2>Goals</h2>
+    <ul>
+      <li>⚙️ Build my first IoT Project (AB RushMeter)</li>
+      <li>🎬 Cteating new videos</li>
+      <li>🌐 Launch a personal portfolio website</li>
+      <li>💸 Start earning through freelancing</li>
+    </ul>
+  </section>  <section class="slide-up fadeIn3">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:mrangryboy03@gmail.com">Email</a></p>
+    <p>📱 WhatsApp: +91 7010217054</p>
+    <p>📸 Instagram: <a href="https://instagram.com/AngryBoy.Official" target="_blank">@AngryBoy.Official</a></p>
+  </section>  <footer>
+    © 2025 AngryBoy | Designed with 💚💙 by AngryBoy
+  </footer>  <script>
+    // Trigger animations on scroll
+    const sections = document.querySelectorAll('.slide-up');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script></body>
+</html>
